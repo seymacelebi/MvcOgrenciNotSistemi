@@ -1,0 +1,77 @@
+﻿@model OgrenciNotSistemiMvc.Models.EntityFramework.TBLOGRENCILER
+@{
+    ViewBag.Title = "YeniOgrenci";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <form method="post" class="form-group">
+        <div>
+            <label>Öğrenci Adı</label>
+            <input type="text" class="form-control" name="OGRAD" />
+        </div>
+
+        <div style="margin-top:10px">
+            <label>Öğrenci Soyadı</label>
+            <input type="text" class="form-control" name="OGRSOYAD" />
+        </div>
+
+        <div style="margin-top:10px">
+            <label>Öğrenci Fotoğrafı</label>
+            <input type="text" class="form-control" name="OGRFOTO" />
+        </div>
+
+        
+        <div style="margin-top:10px">
+            <label>Öğrenci Cinsiyet</label>
+            <input type="text" class="form-control" name="OGRCINSIYET" />
+        </div>
+        <div style="margin-top:10px">
+            <label>Öğrenci Kulüp</label>
+            @Html.DropDownListFor(m => m.TBLKULUPLER.KULUPID, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+
+        </div>
+
+        <div style="margin-top:10px">
+            <button class="btn btn-primary">Öğrenci Ekle</button>
+
+        </div>
+
+        @*<div style="margin-top:10px">
+            <label>Şehir Seçimi</label>
+            @Html.DropDownList("Şehirler",
+           new[]
+           {
+               new SelectListItem(){Value="1", Text="Ankara"},
+               new SelectListItem(){Value="2", Text="Bursa"},
+               new SelectListItem(){Value="3", Text="İstanbul"},
+               new SelectListItem(){Value="4", Text="İzmir"}
+           }, "Şehir Seçiniz...", new { @class = "form-control" })
+
+        </div>*@
+
+
+    </form>
+@*<div style="margin-top:10px">
+
+        <label>Film Seçin</label>
+        <select id="MovieType" name="MovieType">
+
+            <option value="0">Aksiyon</option>
+
+            <option value="1">Drama</option>
+
+            <option selected="selected" value="2">Romantik Komedi</option>
+
+            <option value="3">Bilim Kurgu</option>
+
+            <option value="3">Animasyon</option>
+
+        </select>
+
+    </div>*@
+@*<div style="margin-top:10px">
+
+        @Html.DropDownList("DersAd", null, "Ders Seçin", new { @class = "form-control" })
+    </div>*@
+
+
